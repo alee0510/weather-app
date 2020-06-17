@@ -3,11 +3,11 @@
 
 ## development timeline
 - [x] setup project folder and assets
-- [] build custom acrylic material as primary container
-- [] build web layout
-- [] create custom components : card
-- [] setup web template
-- [] setup API
+- [ ] build custom acrylic material as primary container
+- [ ] build web layout
+- [ ] create custom components : card
+- [ ] setup web template
+- [ ] setup API
 
 ## :thumbsup: special thank to
 - usplash.com
