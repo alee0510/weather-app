@@ -1,5 +1,4 @@
-# :cloud: Weather app : Ongoing project 
-build using ReactJS technology ![Twitter Follow](https://img.shields.io/twitter/follow/a_lee0510?style=social)![GitHub followers](https://img.shields.io/github/followers/alee0510?style=social)
+# :cloud: Weather app : Ongoing project ![Twitter Follow](https://img.shields.io/twitter/follow/a_lee0510?style=social)![GitHub followers](https://img.shields.io/github/followers/alee0510?style=social)
 
 
 ## development timeline
