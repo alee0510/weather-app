@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+
+* {
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    transition: 250ms all ease-in;
+    font-family: 'Open Sans';
+}
+
+@mixin animation-time ($time) {
+    transition: all $time cubic-bezier(0, 0.995, 0.99, 1) !important;
+    -webkit-transition: all $time cubic-bezier(0, 0.995, 0.99, 1) !important
+}
+
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

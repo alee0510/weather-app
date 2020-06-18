@@ -1,13 +1,12 @@
 import React from 'react'
+import '../styles/acrylic.scss'
 
-const style = {
-    backgroundColor : 'black',
-    opacity : 0.9,
-    borderRadius : '15px',
-}
-
-function Acrylic () {
-    return <div></div>
+function Acrylic (props) {
+    return (
+        <div className='acrylic'>
+            {props.children}
+        </div>
+    )
 }
 
 export default Acrylic
