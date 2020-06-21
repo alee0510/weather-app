@@ -1,5 +1,5 @@
 import React from 'react'
-import { weatherIcon } from '../assets'
+import { weatherIcon, gitHub } from '../assets'
 import '../styles/navbar.scss'
 
 class Navbar extends React.Component {
@@ -13,6 +13,9 @@ class Navbar extends React.Component {
                     <h1>Weather</h1>
                 </div>
                 <div id='media-social'>
+                    <ul>
+                        <li><img src={gitHub} alt='git'/></li>
+                    </ul>
                 </div>
             </div>
         )
