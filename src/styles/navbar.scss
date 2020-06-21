@@ -1,0 +1,21 @@
+@import './index.scss';
+
+.navbar-container {
+    height: 50px; width: 100%;
+    // background-color: yellow;
+    color: white;
+    padding: 4% 5%;
+    @include flex(row, space-between, center);
+    #brand {
+        @include flex(row, center, center);
+        height: 100%; width: auto;
+        div {
+            height: 100%; width: 45px;
+            @include flex(row, center, center);
+        }
+        h1 {
+            margin-left: 15px;
+            font-size: 28px;
+        }
+    }
+}

@@ -2,10 +2,14 @@ import React from 'react'
 import Axios from 'axios'
 
 // custom components
-import Acrylic from './components/acrylic'
+// import Acrylic from './components/acrylic'
+import Navbar from './components/navbar'
 
 // import assets
 import { morning, day, afternoon, night } from './assets'
+
+// import style
+import './styles/main.scss'
 
 // API
 const URL = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -62,23 +66,14 @@ class Main extends React.Component {
     }
 
     render () {
-        const containerStyle = {
+        const styles = {
             backgroundImage : `url(${this.setBackground()})`,
-            backgroundRepeat : 'no-repeat',
-            backgroundSize : 'cover',
-            height : '100vh',
-            width : '100vw',
-            display : 'flex',
-            justifyContent : 'center',
-            alignItems :'center'
         }
         console.log(this.state.data)
 
         return (
-            <div style={containerStyle}>
-               <Acrylic>
-                   <h1>Hello</h1>
-               </Acrylic>
+            <div className='main-container' style={styles}>
+                <Navbar/>
             </div>
         )
     }
