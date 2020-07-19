@@ -21,8 +21,7 @@
     #media-social {
         ul {
             list-style: none;
-            display: flex;
-            align-items: center;
+            @include flex(row, center, center);
             li {
                 display: inline-block;
                 margin-left: 10px;
