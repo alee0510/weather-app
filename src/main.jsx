@@ -1,11 +1,8 @@
 import React from 'react'
-import Axios from 'axios'
-
+import { connect } from 'react-redux'
 import Navbar from './components/navbar'
-
-// import assets & helper
 import { morning, day, afternoon, night } from './assets'
-import { URL, API } from './helpers'
+import { getWeather } from './actions'
 
 // import style
 import './styles/main.scss'
@@ -23,28 +20,22 @@ const setBackground = () => {
     }
 }
 
-
-// main class
 class Main extends React.Component {
     componentDidMount () {
         this.getLocation()
     }
 
     getLocation = () => {
-        console.log('get location')
+        // console.log('get location')
         if (!navigator.geolocation) {
             console.log('navigation doesn\'t supported')
         } else {
             navigator.geolocation.getCurrentPosition(position => {
-                console.log(position)
-                // this.getWeatherData(position.coords)
+                // console.log(position)
+                const { latitude, longitude } = position.coords
+                this.props.getWeather(`lat=${latitude}&lon=${longitude}`)
             })
         }
-    }
-
-    getWeatherData = (position = null) => {
-        console.log('get data')
-        const key = position ? `lat=${position.latitude}&lon=${position.longitude}` : 'q=Jakarta'
     }
 
     render () {
@@ -60,4 +51,8 @@ class Main extends React.Component {
     }
 }
 
-export default Main
+const mapStore = (state) => ({
+    weather : state.data
+})
+
+export default connect(mapStore, { getWeather })(Main)

@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import { URL, API, GET_WEATHER } from '../helpers'
 
-export const getWeether = (location) => {
+export const getWeather = (location) => {
     return async dispatch => {
         try {
             const { data } = await Axios.get(URL + location + API)
