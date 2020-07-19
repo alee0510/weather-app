@@ -1,19 +1,28 @@
 import React from 'react'
 import Axios from 'axios'
 
-// custom components
-// import Acrylic from './components/acrylic'
 import Navbar from './components/navbar'
 
-// import assets
+// import assets & helper
 import { morning, day, afternoon, night } from './assets'
+import { URL, API } from './helpers'
 
 // import style
 import './styles/main.scss'
 
-// API
-const URL = 'https://api.openweathermap.org/data/2.5/weather?'
-const API = '&appid=fd2395620d3afcb1f6d8ac8b16d8b34a'
+const setBackground = () => {
+    const time = new Date().getHours() // 24 hours
+    if (time >= 0 && time <= 6) {
+        return morning
+    } else if (time > 6 && time <= 12 ) {
+        return day
+    } else if (time >= 15 && time <= 18) {
+        return afternoon
+    } else {
+        return night
+    }
+}
+
 
 // main class
 class Main extends React.Component {
@@ -26,20 +35,6 @@ class Main extends React.Component {
     }
     componentDidMount () {
         this.getLocation()
-    }
-
-    setBackground = () => {
-        console.log('set background')
-        const time = new Date().getHours() // 24 hours
-        if (time >= 0 && time <= 6) {
-            return morning
-        } else if (time > 6 && time <= 12 ) {
-            return day
-        } else if (time >= 15 && time <= 18) {
-            return afternoon
-        } else {
-            return night
-        }
     }
 
     getLocation = () => {
@@ -56,7 +51,7 @@ class Main extends React.Component {
 
     getWeatherData = async (position = null) => {
         console.log('get data')
-        let key = position ? `lat=${position.latitude}&lon=${position.longitude}` : 'q=Jakarta'
+        const key = position ? `lat=${position.latitude}&lon=${position.longitude}` : 'q=Jakarta'
         try {
             const { data } = await Axios.get(URL + key + API)
             this.setState({ data : data, coordinates : position })
@@ -67,7 +62,7 @@ class Main extends React.Component {
 
     render () {
         const styles = {
-            backgroundImage : `url(${this.setBackground()})`,
+            backgroundImage : `url(${setBackground()})`,
         }
         console.log(this.state.data)
 
