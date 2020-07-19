@@ -26,13 +26,6 @@ const setBackground = () => {
 
 // main class
 class Main extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            data : [],
-            coordinates : null
-        }
-    }
     componentDidMount () {
         this.getLocation()
     }
@@ -49,22 +42,15 @@ class Main extends React.Component {
         }
     }
 
-    getWeatherData = async (position = null) => {
+    getWeatherData = (position = null) => {
         console.log('get data')
         const key = position ? `lat=${position.latitude}&lon=${position.longitude}` : 'q=Jakarta'
-        try {
-            const { data } = await Axios.get(URL + key + API)
-            this.setState({ data : data, coordinates : position })
-        } catch(error) {
-            console.log(error)
-        }
     }
 
     render () {
         const styles = {
             backgroundImage : `url(${setBackground()})`,
         }
-        console.log(this.state.data)
 
         return (
             <div className='main-container' style={styles}>
