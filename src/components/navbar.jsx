@@ -14,7 +14,8 @@ class Navbar extends React.Component {
                 </div>
                 <div id='media-social'>
                     <ul>
-                        <li><img src={gitHub} alt='git'/></li>
+                        <li>alee0510</li>
+                        <li><img src={gitHub} alt='git' width="30px"/></li>
                     </ul>
                 </div>
             </div>
