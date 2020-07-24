@@ -54,12 +54,15 @@ class Main extends React.Component {
         return (
             <div className="main-container" style={this.state.styles}>
                 <Navbar/>
-                <Weather/>
+                {/* <Weather/>
                 <MiniCard/>
-                <div className="daily-forecast"></div>
+                <div className="daily-forecast"></div> */}
             </div>
         )
     }
 }
 
+const mapStore = (state) => ({
+    data : state.data
+})
 export default connect(null, { getWeather })(Main)

@@ -1,28 +1,21 @@
 import { GET_WEATHER } from '../helpers'
+
 const INITIAL_STATE = {
-    coord : {},
+    location : '',
+    current : {},
     weather : {},
-    main : {},
-    visibility : null,
-    wind : {},
-    clouds : {},
-    rain : {},
-    sys : {},
-    name : '',
+    daily : []
 }
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case GET_WEATHER : 
-            return { ...state, 
-                coord : action.payload.coord,
-                weather : action.payload.weather[0],
-                main : action.payload.main,
-                visibility : action.payload.visibility,
-                wind : action.payload.wind,
-                clouds : action.payload.clouds,
-                sys : action.payload.sys,
-                name : action.payload.name 
+            return {
+                ...state,
+                location : action.payload.timezone,
+                current : action.payload.current,
+                weather : action.payload.current && action.payload.current.weather[0],
+                daily : action.payload.daily
             }
         default :
             return state
