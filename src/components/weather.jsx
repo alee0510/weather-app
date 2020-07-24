@@ -8,8 +8,8 @@ import MyLocationIcon from '@material-ui/icons/MyLocation'
 import { URL_ICON } from '../helpers'
 import '../styles/weather.scss'
 
-const FtoC = temp => (temp - 32) * (5 / 9)
-const CtoF = temp => (temp * ( 4 / 5 )) + 32
+const FtoC = temp => Math.round((temp - 32) * (5 / 9))
+const CtoF = temp => Math.round((temp * ( 9 / 5 )) + 32)
 
 class Weather extends React.Component {
     constructor(props) {
@@ -20,23 +20,47 @@ class Weather extends React.Component {
         }
     }
 
+    handleToFahrenheit = _ => {
+        const { temp } = this.state
+        const { main } = this.props
+        const C = temp ? temp : Math.round(main.temp - 273.15)
+        this.setState({ temp : CtoF(C), active : 1 })
+    }
+
+    handleToCelcius = _ => {
+        this.setState(state => ({ temp : FtoC(state.temp), active : 0 }))
+    }
+
     render () {
         const { weather, main, location } = this.props
-        const { temp } = this.state
+        const { temp, active } = this.state
+        console.log('temp : ', temp)
 
         return (
             <div className="weather">
                 <div className="temp-icon">
-                    <img src={URL_ICON + (weather && weather.icon) + '@4x.png'} alt="weather-icon"/>
-                    <div className="temp">
+                    <img 
+                        src={URL_ICON + (weather && weather.icon) + '@4x.png'} 
+                        alt="weather-icon"/>
+                    <div className="temp-info">
                         <div className="location">
                             <MyLocationIcon fontSize="small"/>
                             <h3>{location}</h3>
                         </div>
-                        <h1>{temp ? temp : `${main && main.temp} F`}</h1>
-                        <div id="button-container">
-                            <Button id="button">C</Button>
-                            <Button id="button">F</Button>
+                        <div className="temp">
+                            <h1>{temp ? temp : (main && Math.round(main.temp - 273.15))}</h1>
+                            <div id="button-container">
+                                <Button 
+                                    id="button" 
+                                    disabled={ !active ? true : false }
+                                    style={{ fontSize: active ? '20px' : '32px'}}
+                                    onClick={this.handleToCelcius}>C</Button>
+                                <Button 
+                                    id="button" 
+                                    disabled={ active ? true : false }
+                                    style={{ fontSize: !active ? '20px' : '32px'}}
+                                    onClick={this.handleToFahrenheit}>F</Button>
+                            </div>
                         </div>
                     </div>
                 </div>

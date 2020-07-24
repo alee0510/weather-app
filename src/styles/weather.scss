@@ -11,30 +11,42 @@
         display: flex;
         align-items: center;
 
-        .temp {
+        .temp-info {
             // background-color: pink;
-            padding: 10px;
+            padding: 5px;
 
             .location {
                 display: flex;
                 align-items: center;
-                margin-bottom: 5px;
+                // margin-bottom: 5px;
                 h3 { font-size: 16px; margin-left: 10px;}
             }
 
-            #button-container {
+            .temp {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                // background-color: yellow;
+                // padding: 5px;
 
-                #button {
-                    font-size: 18px;
-                    font-weight: 600;
-                    width: 30px;
-                    height: 30px;
-                    padding: 0px;
-                    color: white;
-                    margin-top: 5px;
+                h1 {
+                    font-size: 72px;
+                    margin: 0px 5px;
+                }
+
+                #button-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    #button {
+                        font-size: 18px;
+                        font-weight: 600;
+                        max-width: 30px;
+                        height: 30px;
+                        padding: 0px;
+                        color: white;
+                        margin-top: 5px;
+                    }
                 }
             }
         }
