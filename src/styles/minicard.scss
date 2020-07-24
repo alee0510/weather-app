@@ -1,0 +1,15 @@
+.mini-card {
+    margin: 2% 4%;
+    padding: 0% 23%;
+    // background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media (max-width : 1684px) {
+    .mini-card {
+        padding: 0% 15%;
+    }
+}
