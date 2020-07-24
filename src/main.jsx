@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+// components
 import Navbar from './components/navbar'
+import Weather from './components/weather'
 
+// others
 import { morning, day, afternoon, night } from './assets'
 import { getWeather } from './actions'
-
-import { URL_ICON } from './helpers'
 
 // import style
 import './styles/main.scss'
@@ -25,8 +26,16 @@ const setBackground = () => {
 }
 
 class Main extends React.Component {
+    constructor(props) {
+        super(props) 
+        this.state = {
+            styles : {}
+        }
+    }
+
     componentDidMount () {
         this.getLocation()
+        this.setState({ styles : { backgroundImage : `url(${setBackground()})` }})
     }
 
     getLocation = () => {
@@ -41,30 +50,15 @@ class Main extends React.Component {
     }
 
     render () {
-        const styles = {
-            backgroundImage : `url(${setBackground()})`,
-        }
-
-        const { weather, main, name } = this.props
-
         return (
-            <div className="main-container" style={styles}>
+            <div className="main-container" style={this.state.styles}>
                 <Navbar/>
-                <div className="main-info">
-                    <img src={URL_ICON+`${weather && weather.icon}`+'@4x.png'}/>
-                    <h1>{main && main.temp} F</h1>
-                    <h1>{weather && `${weather.main}, ${weather.description}`}</h1>
-                    <h3>Location : {name}</h3>
-                </div>
+                <Weather/>
+                <div className="other-info"></div>
+                <div className="daily-forecast"></div>
             </div>
         )
     }
 }
 
-const mapStore = (state) => ({
-    weather : state.weather,
-    main : state.main,
-    name : state.name
-})
-
-export default connect(mapStore, { getWeather })(Main)
+export default connect(null, { getWeather })(Main)

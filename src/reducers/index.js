@@ -1,5 +1,4 @@
 import { GET_WEATHER } from '../helpers'
-import { act } from 'react-dom/test-utils'
 const INITIAL_STATE = {
     coord : {},
     weather : {},
