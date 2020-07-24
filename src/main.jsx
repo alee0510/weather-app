@@ -26,12 +26,10 @@ class Main extends React.Component {
     }
 
     getLocation = () => {
-        // console.log('get location')
         if (!navigator.geolocation) {
             console.log('navigation doesn\'t supported')
         } else {
             navigator.geolocation.getCurrentPosition(position => {
-                // console.log(position)
                 const { latitude, longitude } = position.coords
                 this.props.getWeather(`lat=${latitude}&lon=${longitude}`)
             })
