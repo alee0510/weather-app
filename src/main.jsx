@@ -6,6 +6,7 @@ import Navbar from './components/navbar'
 import Weather from './components/weather'
 import MiniCard from './components/mincard'
 import Daily from './components/forecast'
+import Footer from './components/footer'
 
 // others
 import { morning, day, afternoon, night } from './assets'
@@ -61,6 +62,7 @@ class Main extends React.Component {
                     <h1>Daily</h1>
                     <Daily/>
                 </div>
+                <Footer/>
             </div>
         )
     }
