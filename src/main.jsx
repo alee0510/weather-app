@@ -27,8 +27,8 @@ const setBackground = () => {
 }
 
 class Main extends React.Component {
-    constructor(props) {
-        super(props) 
+    constructor (props) {
+        super (props) 
         this.state = {
             styles : {}
         }
@@ -54,6 +54,8 @@ class Main extends React.Component {
         return (
             <div className="main-container" style={this.state.styles}>
                 <Navbar/>
+                <Weather/>
+                <MiniCard/>
                 {/* <Weather/>
                 <MiniCard/>
                 <div className="daily-forecast"></div> */}
@@ -62,7 +64,4 @@ class Main extends React.Component {
     }
 }
 
-const mapStore = (state) => ({
-    data : state.data
-})
 export default connect(null, { getWeather })(Main)

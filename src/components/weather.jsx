@@ -22,8 +22,8 @@ class Weather extends React.Component {
 
     handleToFahrenheit = _ => {
         const { temp } = this.state
-        const { main } = this.props
-        const C = temp ? temp : Math.round(main.temp - 273.15)
+        const { current } = this.props
+        const C = temp ? temp : Math.round(current.temp - 273.15)
         this.setState({ temp : CtoF(C), active : 1 })
     }
 
@@ -32,7 +32,7 @@ class Weather extends React.Component {
     }
 
     render () {
-        const { weather, main, location } = this.props
+        const { weather, current, location } = this.props
         const { temp, active } = this.state
         console.log('temp : ', temp)
 
@@ -48,7 +48,7 @@ class Weather extends React.Component {
                             <h3>{location}</h3>
                         </div>
                         <div className="temp">
-                            <h1>{temp ? temp : (main && Math.round(main.temp - 273.15))}</h1>
+                            <h1>{temp ? temp : (current && Math.round(current.temp - 273.15))}</h1>
                             <div id="button-container">
                                 <Button 
                                     id="button" 
@@ -72,8 +72,8 @@ class Weather extends React.Component {
 
 const mapStore = (state) => ({
     weather : state.weather,
-    main : state.main,
-    location : state.name
+    current : state.current,
+    location : state.location
 })
 
 export default connect(mapStore)(Weather)
