@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Navbar from './components/navbar'
 import Weather from './components/weather'
 import MiniCard from './components/mincard'
+import Daily from './components/forecast'
 
 // others
 import { morning, day, afternoon, night } from './assets'
@@ -56,9 +57,10 @@ class Main extends React.Component {
                 <Navbar/>
                 <Weather/>
                 <MiniCard/>
-                {/* <Weather/>
-                <MiniCard/>
-                <div className="daily-forecast"></div> */}
+                <div className="daily-forecast">
+                    <h1>Daily</h1>
+                    <Daily/>
+                </div>
             </div>
         )
     }

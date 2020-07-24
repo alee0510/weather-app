@@ -2,4 +2,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw; height: 100vh;
+
+    .daily-forecast {
+        // background-color: pink;
+        margin: 1% 4%;
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+    }
 }
