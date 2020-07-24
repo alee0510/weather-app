@@ -1,7 +1,8 @@
 import Axios from 'axios'
-import { URL_ONE, API, GET_WEATHER } from '../helpers'
+import { URL_ONE, API, GET_WEATHER, SET_THEME } from '../helpers'
 
 const EXC = '&exclude=hourly'
+
 export const getWeather = (location) => {
     return async dispatch => {
         try {
@@ -11,4 +12,8 @@ export const getWeather = (location) => {
             dispatch({ type : GET_WEATHER, payload : data })
         } catch (err) { console.log(err) }
     }
+}
+
+export const setTheme = () => {
+
 }

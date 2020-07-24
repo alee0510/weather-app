@@ -10,3 +10,6 @@ export const CLOSE_MODAL = 'CLOSE_MODAL'
 
 // weather data
 export const GET_WEATHER = 'GET_WEATHER'
+
+// theme
+export const SET_THEME = 'SET_THEME'
