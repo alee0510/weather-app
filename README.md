@@ -30,6 +30,7 @@
 - etc...
 
 ## NOTE :
-desktop only, next features : add style for mobile support
+- desktop only, next features : add style for mobile support
+- special thank to [open-weather-api](https://openweathermap.org/api)
 
 create by alee0510
