@@ -5,8 +5,8 @@ export const API = '&appid=fd2395620d3afcb1f6d8ac8b16d8b34a'
 export const URL_ICON = 'http://openweathermap.org/img/wn/'
 
 // action
-export const OPEN_MODAL = 'OPEN_MODAL'
-export const CLOSE_MODAL = 'CLOSE_MODAL'
+export const START = 'START'
+export const END = 'END'
 
 // weather data
 export const GET_WEATHER = 'GET_WEATHER'

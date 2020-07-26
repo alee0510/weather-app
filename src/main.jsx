@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { CircularProgress } from '@material-ui/core'
 
 // components
 import Navbar from './components/navbar'
