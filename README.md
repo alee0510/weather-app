@@ -17,12 +17,15 @@
 - openweathermap.org
 
 ## screenshot
-![afternoon](/assets/screenshots/weather_01.jpg)
+![afternoon](/src/assets/screenshots/weather_01.jpg)
 
 ## features
 - automatic selected theme and background
 - dynamic bakground
 - use device location => need user permission to acces user's location from browser
 - etc...
+
+## NOTE :
+desktop only, next features : add style for mobile support
 
 create by alee0510
