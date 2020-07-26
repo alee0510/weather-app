@@ -9,6 +9,7 @@
     backdrop-filter: blur(30px);
     opacity: 85%;
     font-size: 14px;
+    overflow: hidden;
 }
 
 .acrylic::before, .acrylic::after {
