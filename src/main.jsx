@@ -26,7 +26,11 @@ class Main extends React.Component {
     async componentDidMount () {
         await this.getLocation()
         await this.props.setTheme()
-        await this.setState({ styles : { backgroundImage : `url(${this.props.background})` }})
+        await this.setState({ 
+            styles : { 
+                backgroundImage : `url(${this.props.background})`, 
+            }
+        })
     }
 
     getLocation = () => {
@@ -41,9 +45,8 @@ class Main extends React.Component {
     }
 
     render () {
-        // console.log(this.props.loading)
-        if (this.props.loading && !this.props.location) {
-            // console.log('loading')
+        const { loading, location, color } = this.props
+        if (loading && !location) {
             return (
                 <div className="loading">
                     <CircularProgress/>
@@ -57,7 +60,7 @@ class Main extends React.Component {
                 <Weather/>
                 <MiniCard/>
                 <div className="daily-forecast">
-                    <h1>Daily</h1>
+                    <h1 style={{ color : this.props.color }}>Daily</h1>
                     <Daily/>
                 </div>
                 <Footer/>
@@ -68,6 +71,7 @@ class Main extends React.Component {
 
 const mapStore = ({ theme, weather }) => ({ 
     background : theme.background,
+    color : theme.color,
     loading : weather.loading,
     loacation : weather.loacation 
 })

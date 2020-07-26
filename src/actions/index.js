@@ -33,31 +33,39 @@ export const getWeather = (location) => {
 export const setTheme = () => {
     const time = new Date().getHours() // 24 hours
     let theme = {
+        main : '',
         background : '',
         color : ''
     }
 
     if (time > 1 && time <= 4) {
+        theme.main = 'dark'
         theme.background = after_mid_night
-        theme.color = 'dark'
+        theme.color = '#ffffff'
     } else if (time > 4 && time <= 6.5) {
+        theme.main = 'dark'
         theme.background = early_morning
-        theme.color = 'dark'
+        theme.color = '#ffffff'
     } else if (time > 6.5 && theme <= 10) {
+        theme.main = 'light'
         theme.background = morning
-        theme.color = 'light'
+        theme.color = '#2d3436'
     } else if (time > 10 && time  <= 15) {
+        theme.main = 'light'
         theme.background = day
-        theme.color = 'light'
+        theme.color = '#2d3436'
     } else if (time > 15 && time <= 17.5) {
+        theme.main = 'dark'
         theme.background = afternoon
-        theme.color = 'light'
+        theme.color = '#ffffff'
     } else if (time > 17.5 && time <= 22) {
+        theme.main = 'dark'
         theme.background = early_night
-        theme.color = 'dark'
+        theme.color = '#ffffff'
     } else {
+        theme.mian = 'dark'
         theme.background = mid_night
-        theme.color = 'dark'
+        theme.color = '#ffffff'
     }
 
     return { type : SET_THEME, payload : theme }
