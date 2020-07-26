@@ -2,12 +2,13 @@
 
 .acrylic {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     // height: 500px; width: 500px;
     padding: 10px 15px;
     background-color: white;
     backdrop-filter: blur(30px);
-    opacity: 85%;
+    // opacity: 85%;
+    opacity: 0.85;
     font-size: 14px;
     overflow: hidden;
 }
@@ -59,39 +60,39 @@
 
 // opacity
 .o50 {
-    opacity: 50%;
+    opacity: 0.5;
 }
 
 .o55 {
-    opacity: 55%;
+    opacity: 0.55;
 }
 
 .o60 {
-    opacity: 60%;
+    opacity: 0.6;
 }
 
 .o65 {
-    opacity: 65%;
+    opacity: 0.65;
 }
 
 .o70 {
-    opacity: 70%;
+    opacity: 0.7;
 }
 
 .o75 {
-    opacity: 75%;
+    opacity: 0.75;
 }
 
 .o80 {
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 .o85 {
-    opacity: 85%;
+    opacity: 0.85;
 }
 
 .o90 {
-    opacity: 90%;
+    opacity: 0.1;
 }
 
 // radius
