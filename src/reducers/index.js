@@ -1,13 +1,19 @@
-import { GET_WEATHER } from '../helpers'
+import { combineReducers } from 'redux'
 
-const INITIAL_STATE = {
+import { GET_WEATHER, SET_THEME } from '../helpers'
+
+const WAETHER_DATA = {
     location : '',
     current : {},
     weather : {},
     daily : []
 }
 
-export default (state = INITIAL_STATE, action) => {
+const THEME = {
+    theme : {}
+}
+
+const weather =  (state = WAETHER_DATA, action) => {
     switch(action.type) {
         case GET_WEATHER : 
             return {
@@ -17,7 +23,16 @@ export default (state = INITIAL_STATE, action) => {
                 weather : action.payload.current && action.payload.current.weather[0],
                 daily : action.payload.daily
             }
-        default :
-            return state
+        default : return state
     }
 }
+
+const theme = (state = THEME, action) => {
+    switch(action.type) {
+        case SET_THEME : 
+            return { theme : action.payload }
+        default : return state
+    }
+}
+
+export default combineReducers({ weather, theme })
