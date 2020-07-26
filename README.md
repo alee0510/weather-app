@@ -18,6 +18,7 @@
 
 ## screenshot
 ![afternoon](/src/assets/screenshots/weather_01.jpg)
+![early_night](/src/assets/screenshots/weather_02.jpg)
 
 ## features
 - automatic selected theme and background
