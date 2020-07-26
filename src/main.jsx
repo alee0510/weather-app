@@ -41,6 +41,16 @@ class Main extends React.Component {
     }
 
     render () {
+        console.log(this.props.loading)
+        if (this.props.loading && !this.props.location) {
+            console.log('loading')
+            return (
+                <div className="loading">
+                    <CircularProgress/>
+                </div>
+            )
+        }
+
         return (
             <div className="main-container" style={this.state.styles}>
                 <Navbar/>
@@ -56,6 +66,10 @@ class Main extends React.Component {
     }
 }
 
-const mapStore = ({ theme }) => ({ background : theme.background })
+const mapStore = ({ theme, weather }) => ({ 
+    background : theme.background,
+    loading : weather.loading,
+    loacation : weather.loacation 
+})
 
 export default connect(mapStore, { getWeather, setTheme })(Main)

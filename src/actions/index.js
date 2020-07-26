@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { URL_ONE, API, GET_WEATHER, SET_THEME } from '../helpers'
+import { URL_ONE, API, GET_WEATHER, SET_THEME, START, END } from '../helpers'
 import { 
     early_morning, 
     morning, 
@@ -15,11 +15,18 @@ const EXC = '&exclude=hourly'
 export const getWeather = (location) => {
     return async dispatch => {
         try {
+            dispatch({ type : START })
+
             const query = URL_ONE + location + EXC + API
-            console.log(query)
+            // console.log(query)
             const { data } = await Axios.get(query)
             dispatch({ type : GET_WEATHER, payload : data })
-        } catch (err) { console.log(err) }
+            
+            dispatch({ type : END })
+        } catch (err) { 
+            console.log(err) 
+            dispatch({ type : END })
+        }
     }
 }
 

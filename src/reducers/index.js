@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
 
-import { GET_WEATHER, SET_THEME } from '../helpers'
+import { GET_WEATHER, SET_THEME, START, END } from '../helpers'
 
 const WAETHER_DATA = {
     location : '',
     current : {},
     weather : {},
-    daily : []
+    daily : [],
+    loading : true
 }
 
 const THEME = {}
@@ -21,6 +22,10 @@ const weather =  (state = WAETHER_DATA, action) => {
                 weather : action.payload.current && action.payload.current.weather[0],
                 daily : action.payload.daily
             }
+        case START : 
+            return { ...state, loading : true }
+        case END :
+            return { ...state, loading : false }
         default : return state
     }
 }
