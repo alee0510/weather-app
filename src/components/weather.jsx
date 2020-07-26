@@ -32,12 +32,11 @@ class Weather extends React.Component {
     }
 
     render () {
-        const { weather, current, location } = this.props
+        const { weather, current, location, color } = this.props
         const { temp, active } = this.state
-        // console.log('temp : ', temp)
 
         return (
-            <div className="weather">
+            <div className="weather" style={{ color : color }}>
                 <div className="temp-icon">
                     <img 
                         src={URL_ICON + (weather && weather.icon) + '@4x.png'} 
@@ -53,12 +52,12 @@ class Weather extends React.Component {
                                 <Button 
                                     id="button" 
                                     disabled={ !active ? true : false }
-                                    style={{ fontSize: active ? '20px' : '32px'}}
+                                    style={{ fontSize: active ? '20px' : '32px', color : color }}
                                     onClick={this.handleToCelcius}>C</Button>
                                 <Button 
                                     id="button" 
                                     disabled={ active ? true : false }
-                                    style={{ fontSize: !active ? '20px' : '32px'}}
+                                    style={{ fontSize: !active ? '20px' : '32px', color : color }}
                                     onClick={this.handleToFahrenheit}>F</Button>
                             </div>
                         </div>
@@ -70,10 +69,11 @@ class Weather extends React.Component {
     }
 }
 
-const mapStore = ({ weather }) => ({
+const mapStore = ({ weather, theme }) => ({
     weather : weather.weather,
     current : weather.current,
-    location : weather.location
+    location : weather.location,
+    color : theme.color
 })
 
 export default connect(mapStore)(Weather)

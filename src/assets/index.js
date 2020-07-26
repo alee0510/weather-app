@@ -1,11 +1,11 @@
 // background
-export const early_morning = require('./early_morning.jpg')
-export const morning = require('./morning.jpg')
-export const day = require('./day.jpg')
-export const afternoon = require('./afternoon_1.jpg')
-export const early_night = require('./early_night.jpg')
-export const mid_night = require('./mid_night.jpg')
-export const after_mid_night = require('./after_mid_night_2.jpg')
+export const early_morning = require('./backgrounds/early_morning.jpg')
+export const morning = require('./backgrounds/morning.jpg')
+export const day = require('./backgrounds/day.jpg')
+export const afternoon = require('./backgrounds/afternoon_1.jpg')
+export const early_night = require('./backgrounds/early_night.jpg')
+export const mid_night = require('./backgrounds/mid_night.jpg')
+export const after_mid_night = require('./backgrounds/after_mid_night_2.jpg')
 
 export const noise = require('./noise.png')
 

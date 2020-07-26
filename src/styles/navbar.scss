@@ -2,7 +2,7 @@
 
 .navbar-container {
     height: 50px; width: 100%;
-    color: white;
+    // color: white;
     padding: 4% 5% 2.5% 5%;
     @include flex(row, space-between, center);
     #brand {
@@ -24,6 +24,8 @@
             li {
                 display: inline-block;
                 margin-left: 10px;
+                
+                a { text-decoration: none; }
             }
         }
     }

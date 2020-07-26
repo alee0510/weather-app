@@ -14,7 +14,7 @@ const getDate = (date) => {
 class Daily extends React.Component {
     miniCard = _ => {
         return (this.props.daily || []).map((item, index) => (
-            <Acrylic key={index} color="dark" radius="r15" opacity="o70" style={style}>
+            <Acrylic key={index} color={this.props.main} radius="r15" opacity="o70" style={style}>
                 <h2>{getDate(item.dt)}</h2>
                 <img 
                     src={URL_ICON + (item.weather && item.weather[0].icon) + '@2x.png'} 
@@ -42,6 +42,6 @@ const style = {
     padding : '10px 16px'
 }
 
-const mapStore = ({ weather }) => ({ daily : weather.daily })
+const mapStore = ({ weather, theme }) => ({ daily : weather.daily, main : theme.main })
 
 export default connect(mapStore)(Daily)
