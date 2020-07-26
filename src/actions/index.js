@@ -6,7 +6,7 @@ import {
     day, 
     afternoon, 
     early_night, 
-    night, 
+    mid_night, 
     after_mid_night 
 } from '../assets'
 
@@ -49,7 +49,7 @@ export const setTheme = () => {
         theme.background = early_night
         theme.color = 'dark'
     } else {
-        theme.background = night
+        theme.background = mid_night
         theme.color = 'dark'
     }
 

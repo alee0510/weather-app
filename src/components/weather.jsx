@@ -70,10 +70,10 @@ class Weather extends React.Component {
     }
 }
 
-const mapStore = (state) => ({
-    weather : state.weather,
-    current : state.current,
-    location : state.location
+const mapStore = ({ weather }) => ({
+    weather : weather.weather,
+    current : weather.current,
+    location : weather.location
 })
 
 export default connect(mapStore)(Weather)

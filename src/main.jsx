@@ -9,24 +9,10 @@ import Daily from './components/forecast'
 import Footer from './components/footer'
 
 // others
-import { morning, day, afternoon, night } from './assets'
-import { getWeather } from './actions'
+import { getWeather, setTheme } from './actions'
 
 // import style
 import './styles/main.scss'
-
-const setBackground = () => {
-    const time = new Date().getHours() // 24 hours
-    if (time >= 0 && time <= 6) {
-        return morning
-    } else if (time > 6 && time <= 12 ) {
-        return day
-    } else if (time >= 15 && time <= 18) {
-        return afternoon
-    } else {
-        return night
-    }
-}
 
 class Main extends React.Component {
     constructor (props) {
@@ -36,9 +22,10 @@ class Main extends React.Component {
         }
     }
 
-    componentDidMount () {
-        this.getLocation()
-        this.setState({ styles : { backgroundImage : `url(${setBackground()})` }})
+    async componentDidMount () {
+        await this.getLocation()
+        await this.props.setTheme()
+        await this.setState({ styles : { backgroundImage : `url(${this.props.background})` }})
     }
 
     getLocation = () => {
@@ -68,4 +55,6 @@ class Main extends React.Component {
     }
 }
 
-export default connect(null, { getWeather })(Main)
+const mapStore = ({ theme }) => ({ background : theme.background })
+
+export default connect(mapStore, { getWeather, setTheme })(Main)

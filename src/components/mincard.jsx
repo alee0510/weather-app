@@ -5,7 +5,7 @@ import Acrylic from './acrylic'
 import '../styles/minicard.scss'
 
 const MiniCard = props => {
-    const current = useSelector(state => state.current)
+    const current = useSelector(({weather}) => weather.current)
 
     return (
         <div className="mini-card">

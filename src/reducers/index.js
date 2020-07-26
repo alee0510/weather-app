@@ -9,9 +9,7 @@ const WAETHER_DATA = {
     daily : []
 }
 
-const THEME = {
-    theme : {}
-}
+const THEME = {}
 
 const weather =  (state = WAETHER_DATA, action) => {
     switch(action.type) {
@@ -30,7 +28,7 @@ const weather =  (state = WAETHER_DATA, action) => {
 const theme = (state = THEME, action) => {
     switch(action.type) {
         case SET_THEME : 
-            return { theme : action.payload }
+            return { ...action.payload }
         default : return state
     }
 }

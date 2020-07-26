@@ -42,6 +42,6 @@ const style = {
     padding : '10px 16px'
 }
 
-const mapStore = (state) => ({ daily : state.daily })
+const mapStore = ({ weather }) => ({ daily : weather.daily })
 
 export default connect(mapStore)(Daily)
