@@ -60,7 +60,7 @@ class Main extends React.Component {
                 <Weather/>
                 <MiniCard/>
                 <div className="daily-forecast">
-                    <h1 style={{ color : this.props.color }}>Daily</h1>
+                    <h1 style={{ color : color }}>Daily</h1>
                     <Daily/>
                 </div>
                 <Footer/>
