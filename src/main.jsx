@@ -41,9 +41,9 @@ class Main extends React.Component {
     }
 
     render () {
-        console.log(this.props.loading)
+        // console.log(this.props.loading)
         if (this.props.loading && !this.props.location) {
-            console.log('loading')
+            // console.log('loading')
             return (
                 <div className="loading">
                     <CircularProgress/>
