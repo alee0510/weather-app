@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { URL_ONE, API, GET_WEATHER, SET_THEME, START, END } from '../helpers'
+import { URL_ONE, GET_WEATHER, SET_THEME, START, END } from '../helpers'
 import { 
     early_morning, 
     morning, 
@@ -17,6 +17,7 @@ export const getWeather = (location) => {
         try {
             dispatch({ type : START })
 
+            const API = process.env.REACT_APP_API_KEY
             const query = URL_ONE + location + EXC + API
             // console.log(query)
             const { data } = await Axios.get(query)
