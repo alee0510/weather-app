@@ -10,16 +10,28 @@ const Footer = props => (
     <div className="footer">
         <ul>
             <li>
-                <div><TwitterIcon id="icon"/><a href="#">Twitter</a></div>
+                <div>
+                    <TwitterIcon id="icon"/>
+                    <a href="https://twitter.com/a_lee0510">Twitter</a>
+                </div>
             </li>
             <li>
-                <div><InstagramIcon id="icon"/><a href="#">Instagram</a></div>
+                <div>
+                    <InstagramIcon id="icon"/>
+                    <a href="https://www.instagram.com/a_lee0510/">Instagram</a>
+                </div>
             </li>
             <li>
-                <div><FacebookIcon id="icon"/><a href="#">Facebook</a></div>
+                <div>
+                    <FacebookIcon id="icon"/>
+                    <a href="https://web.facebook.com/alee0510/">Facebook</a>
+                </div>
             </li>
             <li>
-                <div><GitHubIcon id="icon"/><a href="#">GitHub</a></div>
+                <div>
+                    <GitHubIcon id="icon"/>
+                    <a href="https://github.com/alee0510">GitHub</a>
+                </div>
             </li>
         </ul>
     </div>
