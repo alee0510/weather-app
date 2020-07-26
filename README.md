@@ -1,7 +1,7 @@
 # :cloud: Weather app
 ![Twitter Follow](https://img.shields.io/twitter/follow/a_lee0510?style=social)![GitHub followers](https://img.shields.io/github/followers/alee0510?style=social)
 
-## demo : 
+## demo : ![weather-app](https://alee0510.github.io/weather-app/)
 
 ## development timeline
 - [x] setup project folder and assets
