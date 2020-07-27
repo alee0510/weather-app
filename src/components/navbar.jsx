@@ -17,7 +17,7 @@ const Navbar = props => {
                 <div id='media-social'>
                     <ul>
                         <li>
-                            <a href="https://github.com/alee0510" style={style}>alee0510</a>
+                            <a href="https://github.com/alee0510" target="_blank" style={style}>alee0510</a>
                         </li>
                         <li>
                             <svg 
