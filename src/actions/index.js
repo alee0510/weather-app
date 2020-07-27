@@ -63,8 +63,8 @@ export const setTheme = () => {
         theme.main = 'dark'
         theme.background = early_night
         theme.color = '#ffffff'
-    } else {
-        theme.mian = 'dark'
+    } else if (time > 22 && time <= 1) {
+        theme.main = 'dark'
         theme.background = mid_night
         theme.color = '#ffffff'
     }
