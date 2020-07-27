@@ -26,6 +26,7 @@ export const getWeather = (location) => {
             dispatch({ type : START })
 
             const API = process.env.REACT_APP_API_KEY
+            console.log(API)
             const query = URL_ONE + location + EXC + API
             // console.log(query)
             const { data } = await Axios.get(query)
