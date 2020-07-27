@@ -2,8 +2,7 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/a_lee0510?style=social)![GitHub followers](https://img.shields.io/github/followers/alee0510?style=social)
 
 ## demo : 
-<!-- - [github-page](https://alee0510.github.io/weather-app/){:target="_blank"} -->
-<a href="https://alee0510.github.io/weather-app/" target="_blank">github-page</a>
+- [github-page](https://alee0510.github.io/weather-app/){:target="_blank"}
 
 ## development timeline
 - [x] setup project folder and assets
