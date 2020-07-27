@@ -12,25 +12,25 @@ const Footer = props => (
             <li>
                 <div>
                     <TwitterIcon id="icon"/>
-                    <a href="https://twitter.com/a_lee0510" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/a_lee0510">Twitter</a>
                 </div>
             </li>
             <li>
                 <div>
                     <InstagramIcon id="icon"/>
-                    <a href="https://www.instagram.com/a_lee0510/" target="_blank">Instagram</a>
+                    <a href="https://www.instagram.com/a_lee0510/">Instagram</a>
                 </div>
             </li>
             <li>
                 <div>
                     <FacebookIcon id="icon"/>
-                    <a href="https://web.facebook.com/alee0510/" target="_blank">Facebook</a>
+                    <a href="https://web.facebook.com/alee0510/">Facebook</a>
                 </div>
             </li>
             <li>
                 <div>
                     <GitHubIcon id="icon"/>
-                    <a href="https://github.com/alee0510" target="_blank">GitHub</a>
+                    <a href="https://github.com/alee0510">GitHub</a>
                 </div>
             </li>
         </ul>
