@@ -45,7 +45,7 @@ class Main extends React.Component {
     }
 
     render () {
-        const { loading, location, color } = this.props
+        const { loading, location } = this.props
         if (loading && !location) {
             return (
                 <div className="loading">
@@ -60,7 +60,7 @@ class Main extends React.Component {
                 <Weather/>
                 <MiniCard/>
                 <div className="daily-forecast">
-                    <h1 style={{ color : color }}>Daily</h1>
+                    <h1>Daily</h1>
                     <Daily/>
                 </div>
                 <Footer/>
@@ -71,7 +71,6 @@ class Main extends React.Component {
 
 const mapStore = ({ theme, weather }) => ({ 
     background : theme.background,
-    color : theme.color,
     loading : weather.loading,
     loacation : weather.loacation 
 })

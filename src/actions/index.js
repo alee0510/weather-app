@@ -1,5 +1,13 @@
 import Axios from 'axios'
-import { URL_ONE, GET_WEATHER, SET_THEME, START, END } from '../helpers'
+import { 
+    URL_ONE, 
+    GET_WEATHER, 
+    SET_THEME, 
+    START, 
+    END,
+    BLACK,
+    WHITE 
+} from '../helpers'
 import { 
     early_morning, 
     morning, 
@@ -42,31 +50,31 @@ export const setTheme = () => {
     if (time > 1 && time <= 4) {
         theme.main = 'dark'
         theme.background = after_mid_night
-        theme.color = '#ffffff'
+        theme.color = WHITE
     } else if (time > 4 && time <= 6.5) {
         theme.main = 'dark'
         theme.background = early_morning
-        theme.color = '#ffffff'
+        theme.color = WHITE
     } else if (time > 6.5 && theme <= 10) {
         theme.main = 'light'
         theme.background = morning
-        theme.color = '#2d3436'
+        theme.color = BLACK
     } else if (time > 10 && time  <= 15) {
         theme.main = 'light'
         theme.background = day
-        theme.color = '#2d3436'
+        theme.color = BLACK
     } else if (time > 15 && time <= 17.5) {
         theme.main = 'dark'
         theme.background = afternoon
-        theme.color = '#ffffff'
+        theme.color = WHITE
     } else if (time > 17.5 && time <= 22) {
         theme.main = 'dark'
         theme.background = early_night
-        theme.color = '#ffffff'
+        theme.color = WHITE
     } else if (time > 22 && time <= 1) {
         theme.main = 'dark'
         theme.background = mid_night
-        theme.color = '#ffffff'
+        theme.color = WHITE
     }
 
     return { type : SET_THEME, payload : theme }

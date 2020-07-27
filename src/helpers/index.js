@@ -12,3 +12,5 @@ export const GET_WEATHER = 'GET_WEATHER'
 
 // theme
 export const SET_THEME = 'SET_THEME'
+export const WHITE = '#ffffff'
+export const BLACK = '#2d3436'
