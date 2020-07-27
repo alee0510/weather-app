@@ -3,7 +3,6 @@
 
 ## demo : 
 - [github-page](https://alee0510.github.io/weather-app/)
-- [firebase-hosting](https://weather-app-630f1.web.app/)
 
 ## development timeline
 - [x] setup project folder and assets
