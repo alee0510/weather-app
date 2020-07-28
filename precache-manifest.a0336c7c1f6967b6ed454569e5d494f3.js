@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c291d10b2c3677a0d0b53edb70b0fcae",
+    "revision": "896d5cefca603219044a95e5d333f0f1",
     "url": "/weather-app/index.html"
   },
   {
-    "revision": "6cc68bb1fe262e8f21fb",
-    "url": "/weather-app/static/css/main.cb01bc1e.chunk.css"
+    "revision": "d7954c2c7b5335df5c29",
+    "url": "/weather-app/static/css/main.9543ad13.chunk.css"
   },
   {
     "revision": "7862850b023be56a0551",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-app/static/js/2.3637eba3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6cc68bb1fe262e8f21fb",
-    "url": "/weather-app/static/js/main.8f623a62.chunk.js"
+    "revision": "d7954c2c7b5335df5c29",
+    "url": "/weather-app/static/js/main.da5f3b62.chunk.js"
   },
   {
     "revision": "d0e2e579b5155f255804",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-app/static/media/github.c4cfcd0f.svg"
   },
   {
-    "revision": "d9704a04546e1c6985aede26072458f7",
-    "url": "/weather-app/static/media/instagram.d9704a04.svg"
+    "revision": "46ce74c2e7da57b99857891a9e0ebf94",
+    "url": "/weather-app/static/media/instagram.46ce74c2.svg"
   },
   {
     "revision": "f311badbd8bef661bdd98ed1ddc2803f",
@@ -64,11 +64,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-app/static/media/noise.84b285bf.png"
   },
   {
-    "revision": "a6190964f6f01aa1b191dd8de5c17569",
-    "url": "/weather-app/static/media/twitter.a6190964.svg"
+    "revision": "a839910896a5857aaf64d557a523ece3",
+    "url": "/weather-app/static/media/twitter.a8399108.svg"
   },
   {
-    "revision": "2816e1b92b73cf7187fd2353255c86ef",
-    "url": "/weather-app/static/media/weather_icon.2816e1b9.svg"
+    "revision": "e85807cb2fe78e1c385e66682412ac82",
+    "url": "/weather-app/static/media/weather_icon.e85807cb.svg"
   }
 ]);
