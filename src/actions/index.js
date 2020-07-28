@@ -54,7 +54,7 @@ export const setTheme = () => {
         theme.main = 'dark'
         theme.background = early_morning
         theme.color = WHITE
-    } else if (time > 6.5 && theme <= 10) {
+    } else if (time > 6.5 && time <= 10) {
         theme.main = 'light'
         theme.background = morning
         theme.color = BLACK
@@ -70,7 +70,7 @@ export const setTheme = () => {
         theme.main = 'dark'
         theme.background = early_night
         theme.color = WHITE
-    } else if (time > 22 && time <= 1) {
+    } else if (time > 22 || time <= 1) {
         theme.main = 'dark'
         theme.background = mid_night
         theme.color = WHITE
