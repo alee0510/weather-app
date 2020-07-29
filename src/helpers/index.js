@@ -1,7 +1,7 @@
 // API url
 export const URL = 'https://api.openweathermap.org/data/2.5/weather?'
 export const URL_ONE = 'https://api.openweathermap.org/data/2.5/onecall?'
-export const URL_ICON = 'http://openweathermap.org/img/wn/'
+export const URL_ICON = 'https://openweathermap.org/img/wn/'
 
 // action
 export const START = 'START'
