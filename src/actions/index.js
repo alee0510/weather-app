@@ -6,7 +6,9 @@ import {
     START, 
     END,
     BLACK,
-    WHITE 
+    WHITE,
+    LIGHT,
+    DARK 
 } from '../helpers'
 import { 
     early_morning, 
@@ -25,8 +27,8 @@ export const getWeather = (location) => {
         try {
             dispatch({ type : START })
 
-            const API = process.env.REACT_APP_API_KEY
-            const query = URL_ONE + location + EXC + API
+            console.log(process.env.REACT_APP_API_KEY)
+            const query = URL_ONE + location + EXC + process.env.REACT_APP_API_KEY
             const { data } = await Axios.get(query)
             dispatch({ type : GET_WEATHER, payload : data })
             
@@ -47,31 +49,31 @@ export const setTheme = () => {
     }
 
     if (time > 1 && time <= 4) {
-        theme.main = 'dark'
+        theme.main = DARK
         theme.background = after_mid_night
         theme.color = WHITE
     } else if (time > 4 && time <= 6.5) {
-        theme.main = 'dark'
+        theme.main = DARK
         theme.background = early_morning
         theme.color = WHITE
     } else if (time > 6.5 && time <= 10) {
-        theme.main = 'light'
+        theme.main = LIGHT
         theme.background = morning
         theme.color = BLACK
     } else if (time > 10 && time  <= 15) {
-        theme.main = 'light'
+        theme.main = LIGHT
         theme.background = day
         theme.color = BLACK
     } else if (time > 15 && time <= 17.5) {
-        theme.main = 'dark'
+        theme.main = DARK
         theme.background = afternoon
         theme.color = WHITE
     } else if (time > 17.5 && time <= 22) {
-        theme.main = 'dark'
+        theme.main = DARK
         theme.background = early_night
         theme.color = WHITE
     } else if (time > 22 || time <= 1) {
-        theme.main = 'dark'
+        theme.main = DARK
         theme.background = mid_night
         theme.color = WHITE
     }
